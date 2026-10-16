@@ -1,0 +1,16 @@
+{
+  "name": "hyperoptimal",
+  "version": "0.1.0",
+  "description": "Work on your AI-selected HyperOptimal tasks. Read task details, add results to Notes, and update progress.",
+  "author": {
+    "name": "HyperOptimal"
+  },
+  "homepage": "https://app.hyperoptimal.com",
+  "keywords": [
+    "hyperoptimal",
+    "tasks",
+    "productivity"
+  ],
+  "logo": "assets/logo.png",
+  "repository": "https://github.com/mattiika69/hyperoptimal-plugin"
+}

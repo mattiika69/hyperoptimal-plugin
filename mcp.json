@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "hyperoptimal": {
+      "url": "https://flmagtzfswvmdjznzmqj.supabase.co/functions/v1/agent-connector"
+    }
+  }
+}
