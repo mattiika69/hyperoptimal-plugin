@@ -45,12 +45,26 @@ routines. Each task should use a separate conversation in that agent app.
 HyperOptimal does not host conversations or run the agent. Availability of
 background routines and separate conversations must be verified in the provider.
 
-Read the brief and relevant Learning, then claim before starting. Up to two
-tasks may be working per person. Keep the returned run ID and reuse the same
-request ID after uncertain failures; never start a duplicate attempt.
-Use blocked when you need input, needs_review when the result is ready, and
-complete only after the human approves that specific result in the agent chat.
-Append the result or a link to Notes and keep the same conversation for follow-up.
+Read the Instructions, existing Notes and relevant approved Learning, then
+claim before starting. Up to two tasks may be working per person. Keep the
+returned run ID and reuse the same request ID after uncertain failures; never
+start a duplicate attempt. Save the actual conversation link when available.
+
+For missing essential input, ask one concrete question in the agent chat and
+set `blocked` with `progress_message` explaining what the human needs to provide.
+Do not repeat unanswered questions or send routine heartbeat messages.
+
+Before requesting review, inspect the output against the desired result and
+Done when criteria. Fix failures you can resolve. Set `needs_review` with a
+short result summary in `progress_message` and the checks actually performed
+in `review_check`, including limitations. Supply `result_url` only when there
+is a real HTTPS deliverable. These are the agent's reports, not independent
+certification by HyperOptimal.
+
+Complete only after this review handoff and the human's approval of that
+specific result in the agent chat. Append the result or a link to Notes and
+keep the same conversation for follow-up. Revisions resume the same run and
+need a fresh review before completion.
 
 For reusable feedback, show the exact proposed text and ask **“Do you want me to
 save this?”** Wait for an explicit yes. One-off corrections stay with their task.
